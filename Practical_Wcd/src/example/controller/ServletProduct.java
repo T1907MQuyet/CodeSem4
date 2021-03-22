@@ -1,6 +1,7 @@
-package com.example.controller;
+package example.controller;
 
-import com.example.model.ProductFinderBean;
+import example.model.ProductFinderBean;
+import example.model.ProductFinderBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

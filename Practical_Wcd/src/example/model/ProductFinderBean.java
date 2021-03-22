@@ -1,4 +1,4 @@
-package com.example.model;
+package example.model;
 
 import com.example.da.ProductDataAccess;
 import com.example.entity.Product;

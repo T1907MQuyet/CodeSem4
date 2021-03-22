@@ -1,4 +1,4 @@
-package com.example.controller;
+package example.controller;
 
 import com.example.model.UserFinderBean;
 

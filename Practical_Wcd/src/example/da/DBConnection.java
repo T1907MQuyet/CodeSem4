@@ -1,4 +1,4 @@
-package com.example.da;
+package example.da;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +12,7 @@ public class DBConnection {
         if(connection==null)
         {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fdata","root","");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/prac","root","");
         }
         return connection;
     }
@@ -23,4 +23,5 @@ public class DBConnection {
             System.out.println("oke");
         }
     }
+
 }

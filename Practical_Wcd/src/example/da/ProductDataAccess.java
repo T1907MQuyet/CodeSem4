@@ -1,4 +1,4 @@
-package com.example.da;
+package example.da;
 
 import com.example.entity.Product;
 

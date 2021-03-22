@@ -10,7 +10,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
-<%@ include file="assets/layout/header.jsp"%>
+<html>
+<head>
+    <title>Title</title>
+    <link  href="${contextPath}/assets/bootstrap.css"  rel="stylesheet" type="text/css" >
+</head>
 <div class="container " style="height: 100%">
     <div class="row justify-content-center align-items-center"  style="height: 100%">
         <div class="col-3">
