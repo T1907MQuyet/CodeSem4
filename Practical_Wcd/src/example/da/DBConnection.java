@@ -12,7 +12,7 @@ public class DBConnection {
         if(connection==null)
         {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/prac","root","");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/prac?serverTimezone=UTC","root","");
         }
         return connection;
     }

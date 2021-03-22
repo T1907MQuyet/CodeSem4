@@ -1,6 +1,7 @@
 package example.controller;
 
-import com.example.model.UserFinderBean;
+import example.model.UserFinderBean;
+import example.model.UserFinderBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

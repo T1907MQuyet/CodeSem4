@@ -1,6 +1,7 @@
 package example.da;
 
-import com.example.entity.Product;
+import example.entity.Product;
+import example.entity.Product;
 
 import java.sql.*;
 import java.util.ArrayList;

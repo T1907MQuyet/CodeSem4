@@ -1,6 +1,7 @@
 package example.model;
 
-import com.example.da.UserDataAccess;
+import example.da.UserDataAccess;
+import example.da.UserDataAccess;
 
 import java.sql.SQLException;
 
