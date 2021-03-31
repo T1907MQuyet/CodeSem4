@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html xmlns:th="https://www.thymeleaf.org">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
@@ -13,6 +13,7 @@
         <div class="container">
             <h2>DANH SACH NGUOI DUNG</h2>
             <p><a class="btn btn-primary" href="/">ADD USER</a></p>
+            <p><label></label>Hello:admin <a href="/logout">Logout</a> </p>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -25,13 +26,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>NoNV</td>
-                        <td>NoNV123</td>
-                        <td>Nguyen Van No</td>
-                        <td>22</td>
-                        <td> <span>Nam</span> </td>
-                        <td><a class="btn btn-primary btn-sm" href="/edit/NoNV">Edit</a> |
+                    <tr th:each="item: ${USERS}">
+                        <td th:text="${item.username}"></td>
+                        <td th:text="${item.password}"></td>
+                        <td th:text="${item.fullname}"></td>
+                        <td th:text="${item.age}"></td>
+                        <td> <span th:text="${item.gender}?  'Nam':'Nu'"></span> </td>
+                        <td><a class="btn btn-primary btn-sm" th:href="@{'/edit/'+ ${item.username}}">Edit</a> |
                          <a class="btn btn-danger btn-sm" href="/delete/NoNV">Del</a></td>
                     </tr>
 

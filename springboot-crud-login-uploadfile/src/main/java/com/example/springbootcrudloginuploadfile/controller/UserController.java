@@ -14,6 +14,8 @@ import java.util.Optional;
 public class UserController {
     @Autowired
     UserService userService;
+    @Autowired
+    User _userBean;
 
     @GetMapping("/")
     public String addOrEdit(ModelMap model){
@@ -27,21 +29,51 @@ public class UserController {
         userService.save(user);
         return  "register-user";
     }
-    @RequestMapping("list")
-    public  String list(ModelMap model ,@PathVariable(name = "username") String username){
+    @RequestMapping("/list")
+    public  String list(ModelMap model ){
 
-        /*model.addAttribute("USERs",userService.findAll());*/
-        Optional<User> u = userService.findById(username);
+        model.addAttribute("USERS",userService.findAll());
+        /*Optional<User> u = userService.findById(username);
         if (u.isPresent()){
+            model.addAttribute("USERS",u.get());
+        }else {
+            model.addAttribute("USERS",new User());
+        }*/
+        return "view-user";
+    }
+    @RequestMapping("/edit/{username}")
+            public  String edit(ModelMap model ,@PathVariable(name = "username") String username)
+    {
+        Optional<User> u = userService.findById(username);
+         if (u.isPresent()){
             model.addAttribute("USER",u.get());
         }else {
             model.addAttribute("USER",new User());
         }
-        return "view-user";
+        model.addAttribute("ACTION","/saveOrUpdate");
+        return "register-user";
     }
-    @RequestMapping("/delete/{username}")
-    /*public String delete(ModelMap model,@PathVariable(name = "username")String username){
-        userService.delete(username);
-    }*/
+    @RequestMapping("/login")
+    public  String showLogin(){
+        return "login";
+    }
+    @PostMapping("checklogin")
+    public String checkLogin(@RequestParam("username")String username,
+                             @RequestParam("password") String password){
+        if (_userBean.getUsername().equals(username)&& _userBean.getPassword().equals(password)){
+            System.out.println("Login thanh cong");
+            return "view-user";
+        }else {
+            System.out.println("Login fail");
+        }
+        return "login";
+    }
+    @GetMapping("logout")
+    public String logout(){
+        return "login";
+    }
+
+
+
 
 }
