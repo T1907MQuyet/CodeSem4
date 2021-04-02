@@ -1,11 +1,12 @@
-package t1907m.springboot_crud_product_user.service.impl;
+package com.example.crud_product_user.service.impl;
 
 
+import com.example.crud_product_user.model.Product;
+import com.example.crud_product_user.repository.ProductRepository;
+import com.example.crud_product_user.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import t1907m.springboot_crud_product_user.repository.ProductRepository;
-import t1907m.springboot_crud_product_user.service.ProductService;
-import t1907m.springboot_crud_product_user.model.Product;
+
 
 import java.util.List;
 

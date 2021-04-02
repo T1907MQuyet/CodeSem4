@@ -1,5 +1,8 @@
-package t1907m.springboot_crud_product_user.controller;
+package com.example.crud_product_user.controller;
 
+import com.example.crud_product_user.model.User;
+import com.example.crud_product_user.service.UserService;
+import com.example.crud_product_user.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,9 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import t1907m.springboot_crud_product_user.validator.UserValidator;
-import t1907m.springboot_crud_product_user.model.User;
-import t1907m.springboot_crud_product_user.service.UserService;
+
 
 @Controller
 public class WebController {

@@ -1,5 +1,8 @@
-package t1907m.springboot_crud_product_user.controller;
+package com.example.crud_product_user.controller;
 
+import com.example.crud_product_user.model.Product;
+import com.example.crud_product_user.service.ProductService;
+import com.example.crud_product_user.validator.ProductValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,9 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import t1907m.springboot_crud_product_user.service.ProductService;
-import t1907m.springboot_crud_product_user.model.Product;
-import t1907m.springboot_crud_product_user.validator.ProductValidator;
+
+
 
 import java.io.File;
 import java.io.IOException;

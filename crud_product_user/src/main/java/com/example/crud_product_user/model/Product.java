@@ -1,4 +1,4 @@
-package t1907m.springboot_crud_product_user.model;
+package com.example.crud_product_user.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

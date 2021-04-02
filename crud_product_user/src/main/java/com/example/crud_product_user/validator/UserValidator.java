@@ -1,12 +1,12 @@
-package t1907m.springboot_crud_product_user.validator;
+package com.example.crud_product_user.validator;
 
+import com.example.crud_product_user.model.User;
+import com.example.crud_product_user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import t1907m.springboot_crud_product_user.model.User;
-import t1907m.springboot_crud_product_user.service.UserService;
 
 @Component
 public class UserValidator implements Validator {

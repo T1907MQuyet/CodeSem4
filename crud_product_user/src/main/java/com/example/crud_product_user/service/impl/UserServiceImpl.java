@@ -1,11 +1,11 @@
-package t1907m.springboot_crud_product_user.service.impl;
+package com.example.crud_product_user.service.impl;
 
+import com.example.crud_product_user.model.User;
+import com.example.crud_product_user.repository.UserRepository;
+import com.example.crud_product_user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import t1907m.springboot_crud_product_user.model.User;
-import t1907m.springboot_crud_product_user.repository.UserRepository;
-import t1907m.springboot_crud_product_user.service.UserService;
 
 import java.util.List;
 

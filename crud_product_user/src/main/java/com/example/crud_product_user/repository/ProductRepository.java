@@ -1,8 +1,9 @@
-package t1907m.springboot_crud_product_user.repository;
+package com.example.crud_product_user.repository;
 
+import com.example.crud_product_user.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import t1907m.springboot_crud_product_user.model.Product;
+
 
 import java.util.List;
 
