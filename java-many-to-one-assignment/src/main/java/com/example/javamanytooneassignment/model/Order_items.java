@@ -1,9 +1,13 @@
 package com.example.javamanytooneassignment.model;
 
-import javax.persistence.*;
+import lombok.Data;
 
+import javax.persistence.*;
+@Data
 @Entity
+/*
 @Table(name = "order_items")
+*/
 public class Order_items {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

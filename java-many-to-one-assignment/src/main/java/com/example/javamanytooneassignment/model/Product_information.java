@@ -1,10 +1,14 @@
 package com.example.javamanytooneassignment.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
-
+@Data
 @Entity
+/*
 @Table(name = "product_information")
+*/
 public class Product_information {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

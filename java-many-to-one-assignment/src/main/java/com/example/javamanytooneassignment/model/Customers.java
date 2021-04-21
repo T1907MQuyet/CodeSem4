@@ -1,11 +1,15 @@
 package com.example.javamanytooneassignment.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
-
+@Data
 @Entity
+/*
 @Table(name = "customers")
+*/
 public class Customers {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,4 +33,6 @@ public class Customers {
 
     @OneToMany(mappedBy = "customers")
     private List<Orders>ordersList;
+
+
 }
