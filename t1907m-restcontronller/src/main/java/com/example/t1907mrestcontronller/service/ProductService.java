@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class ProductService {
-    private  final ProductRepository productRepository;
+    private  final  ProductRepository productRepository;
     public List<Product> fillAllProduct(){
         return productRepository.findAll();
     }
