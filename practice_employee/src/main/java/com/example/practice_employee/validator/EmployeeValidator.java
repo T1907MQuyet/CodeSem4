@@ -12,7 +12,6 @@ public class EmployeeValidator {
 
 
 
-    @Override
     public void validate(Object target, Errors errors) {
         Employee pro = (Employee) target;
         ValidationUtils.rejectIfEmptyOrWhitespace(errors,"full_name","NotEmpty.emp.full_name");

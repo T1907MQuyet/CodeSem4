@@ -13,9 +13,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeRepository employeeRepository;
 
     @Override
-    public boolean insertEmp(Employee p) {
+    public boolean insertEmp(Employee emp) {
         try{
-            employeeRepository.save(p)
+            employeeRepository.save(emp);
             return true;
         }catch (Exception e)
         {
